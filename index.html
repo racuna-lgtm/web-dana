@@ -160,6 +160,22 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .card-cta h3{color:var(--hueso);margin:0;font-size:1.2rem}
 .card-cta p{color:#e7d9c4;margin:5px 0 0;font-size:.95rem}
 
+/* ===== ¿Qué puedes esperar? — promesas interactivas ===== */
+.promesas{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px}
+.promesa{background:var(--hueso);border:1px solid var(--borde);border-radius:14px;padding:22px 24px;cursor:pointer;
+  transition:transform .2s,border-color .2s,box-shadow .2s}
+.promesa:hover{transform:translateY(-3px);border-color:var(--ocre-bril);box-shadow:0 10px 26px rgba(78,22,34,.08)}
+.promesa-head{display:flex;align-items:center;gap:14px}
+.promesa-check{width:32px;height:32px;border-radius:50%;background:rgba(78,22,34,.07);color:var(--oxblood);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .25s,color .25s}
+.promesa.open .promesa-check{background:var(--oxblood);color:var(--hueso)}
+.promesa-check svg{width:17px;height:17px}
+.promesa h3{font-size:1.05rem;color:var(--tinta);margin:0;flex:1;line-height:1.3}
+.promesa-chev{color:var(--ocre);display:inline-flex;transition:transform .25s ease;flex-shrink:0}
+.promesa.open .promesa-chev{transform:rotate(180deg)}
+.promesa-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.promesa-body p{margin:12px 0 0;padding-left:46px;font-size:.95rem;color:var(--texto)}
+
 /* Trayectoria / línea de tiempo */
 .timeline{margin-top:40px;border-left:2px solid var(--ocre-bril);padding-left:32px;max-width:840px}
 .tl-item{position:relative;padding-bottom:30px}
@@ -276,6 +292,8 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
   .block{padding:60px 0}
   .card-cta{flex-direction:column;align-items:flex-start;text-align:left}
   .fab-wa{right:16px;bottom:16px}
+  .promesas{grid-template-columns:1fr}
+  .promesa-body p{padding-left:0}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -312,7 +330,7 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
     <div>
       <span class="eyebrow">Abogada · Derecho de familia y mediación</span>
       <h1>Dana Belén<br><span class="ape">Hernández Pacheco</span></h1>
-      <p class="hero-lead">Acompaño a las familias de La Araucanía —y de todo Chile vía remota— en los momentos que más importan, con cercanía, claridad y compromiso.</p>
+      <p class="hero-lead">Te acompaño en los procesos de familia con cercanía, claridad y compromiso, para que tomes cada decisión con seguridad. Presencial en La Araucanía y online en todo Chile.</p>
       <p class="hero-trust"><span style="width:7px;height:7px;border-radius:50%;background:var(--ocre-claro);display:inline-block;flex-shrink:0"></span>Habilitada ante el Poder Judicial · Atención presencial y online</p>
       <div class="hero-cta">
         <a href="#contacto" class="btn btn-light js-agenda">Agendar consulta</a>
@@ -333,17 +351,8 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
       <h2 class="sec-title">Cercanía profesional en cada caso</h2>
     </div>
     <div>
-      <p>Soy abogada titulada por la Excma. Corte Suprema de Justicia de Chile, Licenciada en Ciencias Jurídicas, Económicas y Administrativas de la Universidad Católica de Temuco, con un enfoque especial en el <strong>derecho de familia</strong> y la <strong>mediación</strong>. Me formé acompañando a personas reales en clínicas jurídicas de litigación, en la Dirección de Género de la universidad y en la Corporación de Asistencia Judicial, en el área de familia.</p>
-      <p>Actualmente curso el Postítulo en Mediación y Derecho de Familia, porque creo en resolver los conflictos cuidando los vínculos de las personas. Trabajo con dedicación, orden y un trato cercano. Te explico cada paso en palabras simples, sin tecnicismos, para que entiendas qué está pasando y qué viene después, y puedas decidir con tranquilidad.</p>
-      <div class="about-side" style="margin-top:24px">
-        <div class="k">Formación</div>
-        <div class="v">Abogada, habilitada por la Excma. Corte Suprema de Justicia de Chile</div>
-        <div class="v">Licenciada en Ciencias Jurídicas, Económicas y Administrativas — Universidad Católica de Temuco</div>
-        <div class="k">Especialización</div>
-        <div class="v">Postítulo en Mediación y Derecho de Familia (en curso)</div>
-        <div class="k">Ubicación</div>
-        <div class="v">Atención en todo Chile vía remota y presencial en la Región de La Araucanía (Temuco, Villarrica, Pucón).</div>
-      </div>
+      <p>Soy abogada titulada por la Excma. Corte Suprema de Justicia de Chile, Licenciada en Ciencias Jurídicas, Económicas y Administrativas de la Universidad Católica de Temuco, con un enfoque especial en el <strong>derecho de familia</strong> y la <strong>mediación</strong>. Me formé acompañando a personas reales en Clínicas Jurídicas de Litigación, en la Dirección de Género de la UCT y en la Corporación de Asistencia Judicial de Villarrica, en el área de familia.</p>
+      <p>Actualmente me estoy especializando en mediación y derecho de familia a través de un postítulo en la UCT, porque creo en resolver los conflictos cuidando los vínculos de las personas. Trabajo con dedicación, orden y un trato cercano. Te explico cada paso en palabras simples, sin tecnicismos, para que entiendas qué está pasando y qué viene después, y puedas decidir con tranquilidad.</p>
     </div>
   </div>
 </section>
@@ -360,10 +369,9 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
     </div>
     <div class="cards">
 
-      <p class="cards-lead">Cada materia tiene su propio camino. Cuando se puede, te ayudo a llegar a un <strong>acuerdo</strong> antes de litigar; y si hay que ir a <strong>tribunales</strong>, te acompaño en todo el proceso.</p>
+      <p class="cards-lead">Cada materia tiene su propio camino. Cuando se puede, te ayudo a llegar a un <strong>acuerdo</strong> antes de ir a juicio; y si hay que ir a <strong>tribunales</strong>, te acompaño en todo el proceso.</p>
 
       <div class="card card--exp">
-        <span class="tag">Especialidad</span>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="7" r="2.3"/><circle cx="16" cy="7" r="2.3"/><path d="M3.5 19v-1.4A4 4 0 0 1 7.5 13.6a4 4 0 0 1 3 1.4"/><path d="M20.5 19v-1.4a4 4 0 0 0-4-3.4 4 4 0 0 0-3 1.4"/><circle cx="12" cy="15.4" r="1.6"/><path d="M9.4 20.5V20a2.6 2.6 0 0 1 5.2 0v.5"/></svg></div>
         <h3>Derecho de familia</h3>
         <p>Acompaño a las personas en los momentos de cambio dentro de la familia, cuidando siempre a quien está en una situación más vulnerable, en especial a niñas, niños y adolescentes.</p>
@@ -382,7 +390,6 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
       </div>
 
       <div class="card card--exp">
-        <span class="tag">Dentro de familia</span>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h6"/><path d="M6.5 8.5L10 12l-3.5 3.5"/><path d="M21 12h-6"/><path d="M17.5 8.5L14 12l3.5 3.5"/><circle cx="12" cy="12" r="1.3"/></svg></div>
         <h3>Mediación familiar</h3>
         <p>Es la puerta de entrada del derecho de familia: en temas como alimentos, cuidado personal y visitas, la ley pide intentar un acuerdo antes de demandar. Llegar a acuerdo es más rápido, cuesta menos y desgasta menos, y cuida sobre todo a los hijos e hijas.</p>
@@ -467,8 +474,65 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
   </div>
 </section>
 
+<!-- ===== ¿Qué puedes esperar? ===== -->
+<section class="block" id="esperar">
+  <div class="wrap reveal">
+    <span class="eyebrow">Por qué trabajar conmigo</span>
+    <h2 class="sec-title">¿Qué puedes esperar al contratar mis servicios?</h2>
+    <p class="sec-intro">Toca cada punto para ver en qué se traduce, en la práctica, trabajar conmigo.</p>
+    <div class="promesas">
+
+      <div class="promesa">
+        <div class="promesa-head">
+          <span class="promesa-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <h3>Atención directa con la abogada, sin intermediarios</h3>
+          <span class="promesa-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="promesa-body"><p>Hablas siempre conmigo. No te derivo a asistentes ni te paso de mano en mano: yo llevo tu caso de principio a fin.</p></div>
+      </div>
+
+      <div class="promesa">
+        <div class="promesa-head">
+          <span class="promesa-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <h3>Explicaciones claras y sin tecnicismos</h3>
+          <span class="promesa-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="promesa-body"><p>Te explico tu situación y tus opciones en palabras simples, para que entiendas qué pasa y qué viene, sin sentirte perdida.</p></div>
+      </div>
+
+      <div class="promesa">
+        <div class="promesa-head">
+          <span class="promesa-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <h3>Respuesta rápida por WhatsApp</h3>
+          <span class="promesa-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="promesa-body"><p>Puedes escribirme por WhatsApp para resolver dudas y saber cómo avanza tu caso, sin esperas eternas.</p></div>
+      </div>
+
+      <div class="promesa">
+        <div class="promesa-head">
+          <span class="promesa-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <h3>Atención online en todo Chile</h3>
+          <span class="promesa-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="promesa-body"><p>Si no estás en La Araucanía, igual te acompaño: hacemos las reuniones por videollamada y coordinamos todo de forma remota.</p></div>
+      </div>
+
+      <div class="promesa">
+        <div class="promesa-head">
+          <span class="promesa-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <h3>Un enfoque colaborativo cuando se puede, y firme cuando hay que defender tus derechos</h3>
+          <span class="promesa-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="promesa-body"><p>Busco acuerdos que cuiden los vínculos y te ahorren tiempo y desgaste; pero si la otra parte no colabora, defiendo tus derechos con decisión.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ===== Trayectoria y formación ===== -->
-<section class="block" id="trayectoria">
+<section class="block alt" id="trayectoria">
   <div class="wrap reveal">
     <span class="eyebrow">Trayectoria y formación</span>
     <h2 class="sec-title">Una preparación sólida y enfocada</h2>
@@ -503,7 +567,7 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
 </section>
 
 <!-- ===== Publicaciones (blog - próxima etapa) ===== -->
-<section class="block alt" id="publicaciones">
+<section class="block" id="publicaciones">
   <div class="wrap reveal">
     <span class="eyebrow">Publicaciones</span>
     <h2 class="sec-title">Derecho en palabras simples</h2>
@@ -590,6 +654,15 @@ document.querySelectorAll('.card--exp').forEach(function(card){
     if(e.target.closest('a')) return;
     var btn = card.querySelector('.card-toggle');
     if(btn && !btn.contains(e.target)) btn.click();
+  });
+});
+
+/* ===== ¿Qué puedes esperar? — puntos interactivos ===== */
+document.querySelectorAll('.promesa').forEach(function(p){
+  p.addEventListener('click', function(){
+    var body = p.querySelector('.promesa-body');
+    var abierto = p.classList.toggle('open');
+    body.style.maxHeight = abierto ? body.scrollHeight + 'px' : '0px';
   });
 });
 
