@@ -186,6 +186,21 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .empty .ic svg{width:40px;height:40px}
 .empty p{max-width:48ch;margin:0 auto;color:var(--texto-2)}
 
+/* Publicaciones - tarjeta de artículo */
+.pub-lead{max-width:70ch;margin:14px 0 0;color:var(--texto-2)}
+.post-card{display:block;margin-top:30px;background:var(--hueso);border:1px solid var(--borde);border-radius:16px;
+  padding:30px;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease;
+  box-shadow:0 6px 20px rgba(78,22,34,.05)}
+.post-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(78,22,34,.12)}
+.post-card .cat{display:inline-block;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--ocre);
+  font-weight:600;margin-bottom:10px}
+.post-card h3{font-family:'Fraunces',serif;font-size:clamp(1.25rem,3.5vw,1.55rem);color:var(--tinta);
+  margin-bottom:10px;line-height:1.2}
+.post-card p{color:var(--texto-2);margin-bottom:14px;max-width:68ch}
+.post-card .more{color:var(--oxblood);font-weight:600;font-size:.95rem}
+.post-card:hover .more{text-decoration:underline}
+.pub-all{margin-top:24px}
+
 /* Contacto */
 .contact{background:var(--oxblood);color:var(--crema)}
 .contact .eyebrow{color:var(--ocre-claro)}
@@ -492,9 +507,17 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
   <div class="wrap reveal">
     <span class="eyebrow">Publicaciones</span>
     <h2 class="sec-title">Derecho en palabras simples</h2>
-    <div class="empty">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5C13.5 5 7 9 6 16l-2 4"/><path d="M16 9L8 17"/><path d="M6.5 15.5H13"/></svg></div>
-      <p>Pronto compartiré aquí artículos y noticias sobre derecho de familia, mediación y tus derechos, explicados de forma clara y cercana. Vuelve pronto.</p>
+    <p class="pub-lead">Artículos sobre derecho de familia, mediación y tus derechos, explicados de forma clara y con datos.</p>
+
+    <a href="mediar-o-demandar.html" class="post-card">
+      <span class="cat">Derecho de familia · Último artículo</span>
+      <h3>Mediar o demandar: cuánto tiempo y plata te ahorra un acuerdo</h3>
+      <p>Antes de ir a tribunales por alimentos, cuidado personal o visitas, la ley te obliga a intentar un acuerdo. Con datos oficiales y foco en La Araucanía, te muestro cuánto ahorra mediar en tiempo, dinero y desgaste.</p>
+      <span class="more">Leer artículo →</span>
+    </a>
+
+    <div class="pub-all">
+      <a href="publicaciones.html" class="btn btn-primary">Ver todas las publicaciones</a>
     </div>
   </div>
 </section>
