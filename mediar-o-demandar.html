@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mediar o demandar: cuánto tiempo y plata te ahorra un acuerdo · Dana Hernández, Abogada</title>
+<meta name="description" content="Antes de demandar en familia, la ley te obliga a intentar un acuerdo. Con datos oficiales, te muestro cuánto ahorra mediar en tiempo, plata y desgaste, con foco en La Araucanía.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234E1622'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' fill='%23F7F0E2' text-anchor='middle'>DH</text></svg>">
+<style>
+/* ===== Variables de marca (idénticas al sitio) ===== */
+:root{
+  --oxblood:#4E1622;
+  --oxblood-deep:#3C0F1A;
+  --tinta:#221710;
+  --texto:#3A3128;
+  --texto-2:#6B5F50;
+  --ocre:#6E4814;          /* ocre profundo: textos de acento sobre claro */
+  --ocre-bril:#A6701F;     /* ocre gráfico: líneas, bordes */
+  --ocre-claro:#C8923B;    /* acento sobre fondo oscuro */
+  --crema:#EFE4CF;
+  --hueso:#F7F0E2;
+  --borde:#DED2BD;
+  --verde:#54684C;         /* verde tierra (WhatsApp matizado) */
+  --maxw:760px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Work Sans',system-ui,sans-serif;
+  color:var(--texto);
+  background:var(--crema);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.18;color:var(--tinta);font-weight:600}
+
+/* ===== Barra de progreso ===== */
+.progress-bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--ocre-bril);z-index:80;transition:width .12s linear}
+
+/* ===== Navegación simple ===== */
+.nav{position:sticky;top:0;z-index:70;background:rgba(239,228,207,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--borde)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tinta)}
+.brand b{font-family:'Fraunces',serif;font-weight:700;color:var(--oxblood);font-size:1.15rem;letter-spacing:.5px}
+.brand span{font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--texto-2)}
+.nav a.back{font-size:.85rem;color:var(--ocre);text-decoration:none;font-weight:500;white-space:nowrap}
+.nav a.back:hover{color:var(--oxblood)}
+
+/* ===== Layout artículo ===== */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* ===== Hero ===== */
+.hero{background:var(--oxblood);color:var(--hueso);padding:54px 0 48px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-90px;bottom:-90px;width:260px;height:260px;border-radius:50%;
+  border:2px solid rgba(200,146,59,.22)}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.74rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--ocre-claro);font-weight:600;margin-bottom:18px}
+.hero .eyebrow::before{content:"";width:26px;height:2px;background:var(--ocre-claro)}
+.hero h1{color:var(--hueso);font-size:clamp(1.85rem,6vw,2.9rem);font-weight:700;letter-spacing:-.5px}
+.hero .lead{margin-top:18px;font-size:clamp(1.02rem,2.5vw,1.18rem);color:#ecdcc6;max-width:60ch}
+.hero .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.82rem;color:#d8c4ad;
+  border-top:1px solid rgba(247,240,226,.18);padding-top:18px}
+.hero .meta b{color:var(--hueso);font-weight:600}
+
+/* ===== Prosa ===== */
+.article{padding:42px 0 10px}
+.article p{margin:0 0 20px;font-size:1.05rem}
+.article h2{font-size:clamp(1.4rem,4vw,1.85rem);margin:46px 0 6px;font-weight:600}
+.article h2 .kicker{display:block;font-family:'Work Sans',sans-serif;font-size:.72rem;letter-spacing:2px;
+  text-transform:uppercase;color:var(--ocre);font-weight:600;margin-bottom:8px}
+.article h3{font-size:1.18rem;margin:26px 0 8px;color:var(--oxblood)}
+.article strong{color:var(--tinta);font-weight:600}
+.article a.ref{color:var(--ocre);text-decoration:none;font-weight:600;font-size:.72em;vertical-align:super;
+  padding:0 1px}
+.article a.ref:hover{color:var(--oxblood);text-decoration:underline}
+
+/* ===== Destacado / callout ===== */
+.callout{background:var(--hueso);border-left:4px solid var(--ocre-bril);border-radius:0 12px 12px 0;
+  padding:22px 24px;margin:30px 0;box-shadow:0 1px 0 var(--borde)}
+.callout p{margin:0;font-size:1.02rem}
+.callout .big{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--oxblood);font-weight:600;display:block;margin-bottom:4px}
+
+/* ===== Bloque visual genérico ===== */
+.viz{background:var(--hueso);border:1px solid var(--borde);border-radius:16px;padding:26px 22px;margin:34px 0;
+  box-shadow:0 8px 24px rgba(78,22,34,.05)}
+.viz .viz-title{font-family:'Fraunces',serif;font-weight:600;color:var(--tinta);font-size:1.22rem;margin-bottom:4px}
+.viz .viz-sub{font-size:.86rem;color:var(--texto-2);margin-bottom:22px}
+.viz .src{font-size:.74rem;color:var(--texto-2);margin-top:18px;border-top:1px dashed var(--borde);padding-top:10px}
+.viz .src a{color:var(--ocre);text-decoration:none}
+
+/* ===== Comparador Mediar vs Litigar ===== */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.compare .col{border-radius:14px;padding:20px 18px}
+.compare .col.med{background:#eef0e8;border:1.5px solid var(--verde)}
+.compare .col.jui{background:#f3e6e2;border:1.5px solid rgba(78,22,34,.28)}
+.compare .col h4{font-size:1.08rem;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.compare .col.med h4{color:#3f5238}
+.compare .col.jui h4{color:var(--oxblood)}
+.compare .row{padding:11px 0;border-top:1px solid rgba(0,0,0,.07);font-size:.94rem}
+.compare .row:first-of-type{border-top:none}
+.compare .row .lbl{display:block;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;color:var(--texto-2);margin-bottom:2px}
+.compare .row .val{font-weight:600;color:var(--tinta)}
+.compare .tagwin{display:inline-block;margin-top:3px;font-size:.7rem;background:var(--verde);color:#fff;
+  padding:1px 8px;border-radius:20px}
+.compare .col.neutral{background:#f3eee4;border:1.5px solid var(--borde)}
+.compare .col.neutral h4{color:var(--texto)}
+.qrow{padding:9px 0 9px 26px;position:relative;font-size:.92rem;border-top:1px solid rgba(0,0,0,.06);line-height:1.5}
+.qrow:first-of-type{border-top:none}
+.qrow::before{position:absolute;left:0;top:8px;font-weight:700;font-size:.95rem;line-height:1}
+.qrow.yes::before{content:"\2713";color:var(--verde)}
+.qrow.no::before{content:"\2717";color:#b06a5a}
+
+/* ===== Barras horizontales animadas ===== */
+.bars{display:flex;flex-direction:column;gap:18px}
+.bar-row .bar-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;gap:10px}
+.bar-row .bar-name{font-weight:600;color:var(--tinta);font-size:.95rem}
+.bar-row .bar-val{font-size:.9rem;color:var(--ocre);font-weight:600;white-space:nowrap}
+.bar-track{background:#e6d8c0;border-radius:10px;height:26px;overflow:hidden;position:relative}
+.bar-fill{height:100%;width:0;border-radius:10px;transition:width 1.2s cubic-bezier(.22,1,.36,.3)}
+.bar-fill.f-med{background:linear-gradient(90deg,#54684C,#6c8161)}
+.bar-fill.f-jui{background:linear-gradient(90deg,#4E1622,#7a2433)}
+.bar-fill.f-ocre{background:linear-gradient(90deg,#A6701F,#C8923B)}
+.bar-note{font-size:.78rem;color:var(--texto-2);margin-top:3px}
+
+/* ===== Tasa de acuerdo: barra apilada ===== */
+.stack{display:flex;height:40px;border-radius:10px;overflow:hidden;margin:8px 0 16px;background:#e6d8c0}
+.stack .seg{height:100%;width:0;transition:width 1.3s cubic-bezier(.22,1,.36,.3);display:flex;align-items:center;
+  justify-content:center;color:#fff;font-weight:600;font-size:.9rem;cursor:default;position:relative}
+.stack .s1{background:var(--verde)}
+.stack .s2{background:var(--ocre-bril)}
+.stack .s3{background:var(--oxblood)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.85rem}
+.legend .item{display:flex;align-items:center;gap:7px}
+.legend .dot{width:13px;height:13px;border-radius:4px;flex:none}
+
+/* ===== Contadores grandes ===== */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{background:var(--hueso);border:1px solid var(--borde);border-radius:14px;padding:20px 14px;text-align:center}
+.stat .num{font-family:'Fraunces',serif;font-weight:700;color:var(--oxblood);font-size:clamp(1.7rem,7vw,2.4rem);line-height:1}
+.stat .cap{font-size:.82rem;color:var(--texto-2);margin-top:8px;line-height:1.35}
+
+/* ===== Grilla de puntos (incumplimiento) ===== */
+.dotgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;max-width:300px}
+.dotgrid .d{aspect-ratio:1;border-radius:50%;background:#e0d2bb;transition:background .4s ease,transform .4s ease}
+.dotgrid .d.on{background:var(--oxblood)}
+.dot-caption{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:8px}
+.dot-caption .pct{font-family:'Fraunces',serif;font-size:2.6rem;font-weight:700;color:var(--oxblood);line-height:1}
+
+/* ===== Centros / comunas ===== */
+.comunas{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.comuna{background:#eef0e8;border:1px solid var(--verde);color:#3f5238;border-radius:20px;
+  padding:5px 13px;font-size:.86rem;font-weight:500}
+.comuna.hl{background:var(--verde);color:#fff}
+
+/* ===== CTA ===== */
+.cta{background:var(--oxblood);color:var(--hueso);border-radius:18px;padding:34px 26px;margin:46px 0 20px;text-align:center;
+  position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;left:-70px;top:-70px;width:200px;height:200px;border-radius:50%;
+  border:2px solid rgba(200,146,59,.2)}
+.cta h2{color:var(--hueso);font-size:1.5rem;margin:0 0 10px}
+.cta p{color:#e7d9c4;margin:0 auto 22px;max-width:46ch}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:30px;text-decoration:none;
+  font-weight:600;font-size:.95rem;transition:transform .15s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-light{background:var(--hueso);color:var(--oxblood)}
+.btn-wa{background:var(--verde);color:var(--hueso)}
+.btn svg{width:18px;height:18px}
+
+/* ===== Fuentes ===== */
+.fuentes{padding:30px 0 10px}
+.fuentes h2{font-size:1.3rem;margin-bottom:6px}
+.fuentes ol{margin:14px 0 0;padding-left:20px}
+.fuentes li{font-size:.86rem;color:var(--texto-2);margin-bottom:10px;line-height:1.5}
+.fuentes li a{color:var(--ocre);text-decoration:none;word-break:break-word}
+.fuentes li a:hover{text-decoration:underline}
+
+/* ===== Footer ===== */
+footer{background:var(--oxblood-deep);color:#c9b6a3;padding:34px 0;margin-top:30px;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;align-items:center}
+footer a{color:var(--ocre-claro);text-decoration:none}
+footer .disc{font-size:.76rem;color:#9c8979;margin-top:14px;max-width:62ch}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media (max-width:560px){
+  .compare{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr;gap:10px}
+  .stat{display:flex;align-items:center;gap:16px;text-align:left}
+  .stat .cap{margin-top:0}
+  .hero{padding:40px 0 36px}
+}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .bar-fill,.stack .seg{transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ===== Navegación ===== -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">
+      <b>DH</b><span>Dana Hernández · Abogada</span>
+    </a>
+    <a class="back" href="index.html">← Volver al inicio</a>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Derecho en palabras simples</span>
+    <h1>Mediar o demandar: cuánto tiempo y plata te ahorra un acuerdo</h1>
+    <p class="lead">Antes de ir a tribunales por alimentos, cuidado personal o visitas, la ley te obliga a intentar un acuerdo. No es un trámite molesto: bien hecho, puede ahorrarte meses, dinero y un desgaste enorme. Aquí los números, con foco en La Araucanía.</p>
+    <div class="meta">
+      <span>Por <b>Dana Hernández Pacheco</b></span>
+      <span>Lectura ~6 min</span>
+      <span><b>Fuentes oficiales</b> citadas al final</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap article">
+
+  <p>Cuando una relación termina y hay hijos de por medio, aparecen preguntas urgentes: ¿cuánto será la pensión?, ¿con quién viven?, ¿cómo se organizan las visitas? Mucha gente cree que el único camino es <strong>demandar</strong>. Pero en Chile, antes de poder hacerlo, la ley te pide intentar otra cosa primero.</p>
+
+  <div class="callout reveal">
+    <p><span class="big">La regla que pocos conocen</span>
+    En pensión de alimentos, cuidado personal y relación directa y regular (las visitas), la <strong>mediación es previa y obligatoria</strong>: hay que intentarla antes de presentar una demanda.<a class="ref" href="#f1">1</a> Asistir y llegar a acuerdo sigue siendo voluntario, pero el intento es obligatorio.</p>
+  </div>
+
+  <p>Y acá viene lo importante: ese "intento obligatorio" suele ser la mejor salida, no un obstáculo. Cuando hay acuerdo, <strong>el acta firmada y aprobada por el juez vale lo mismo que una sentencia</strong>.<a class="ref" href="#f1">1</a> Es decir, obtienes la misma fuerza legal que un juicio, pero sin el juicio. Veamos por qué conviene, con datos.</p>
+
+  <h2><span class="kicker">El cruce que importa</span>Mediar vs. demandar, lado a lado</h2>
+  <p>Tres diferencias concretas: lo que cuesta, lo que demora y la fuerza legal del resultado.</p>
+
+  <div class="viz reveal">
+    <div class="viz-title">Comparación directa</div>
+    <div class="viz-sub">Mismo resultado jurídico, caminos muy distintos.</div>
+    <div class="compare">
+      <div class="col med">
+        <h4>🤝 Mediación</h4>
+        <div class="row"><span class="lbl">Costo</span><span class="val">Gratuita o de bajo costo</span> en su versión estatal <span class="tagwin">más económica</span></div>
+        <div class="row"><span class="lbl">Duración</span><span class="val">~43 días</span> en promedio</div>
+        <div class="row"><span class="lbl">Validez legal</span><span class="val">Acta = sentencia</span> (aprobada por el juez)</div>
+        <div class="row"><span class="lbl">Desgaste</span><span class="val">Bajo</span>: las partes deciden por sí mismas</div>
+      </div>
+      <div class="col jui">
+        <h4>⚖️ Juicio</h4>
+        <div class="row"><span class="lbl">Costo</span><span class="val">Honorarios de abogado</span> (libres, no regulados)</div>
+        <div class="row"><span class="lbl">Duración</span><span class="val">2 a 6 meses</span> o más</div>
+        <div class="row"><span class="lbl">Validez legal</span><span class="val">Sentencia</span> dictada por un tercero</div>
+        <div class="row"><span class="lbl">Desgaste</span><span class="val">Alto</span>: lo resuelve el tribunal, no ustedes</div>
+      </div>
+    </div>
+    <p class="src">Fuentes: ChileAtiende y BCN (marco legal y validez)<a class="ref" href="#f1">1</a><a class="ref" href="#f2">2</a>; duración real de mediación según datos de gestión del Ministerio de Justicia<a class="ref" href="#f4">4</a>. La duración del juicio es una estimación de la práctica forense.</p>
+  </div>
+
+  <h2><span class="kicker">El bolsillo</span>Lo que cuesta cada camino</h2>
+  <p>En su versión estatal, la mediación en las tres materias obligatorias es <strong>gratuita</strong> para la mayoría de las personas.<a class="ref" href="#f1">1</a> Y aun si decides ir con un mediador privado, el Estado le pone un techo: para 2026 ese tope es de <strong>$130.602 por sesión</strong>.<a class="ref" href="#f3">3</a> Un juicio, en cambio, exige siempre abogado, cuyos honorarios no están regulados. Ahora bien, ese costo es por el <em>proceso</em> de mediación: contar con una abogada que te prepare y revise el acuerdo es un servicio aparte, y es justamente lo que evita que un acuerdo barato te salga caro después.</p>
+
+  <div class="viz reveal" id="vizCosto">
+    <div class="viz-title">Costo para ti, comparado</div>
+    <div class="viz-sub">En pesos. La mediación obligatoria parte en cero.</div>
+    <div class="bars">
+      <div class="bar-row">
+        <div class="bar-head"><span class="bar-name">Mediación estatal (obligatoria)</span><span class="bar-val">$0</span></div>
+        <div class="bar-track"><div class="bar-fill f-med" data-w="3"></div></div>
+        <div class="bar-note">Gratuita en alimentos, cuidado personal y visitas. La realiza un mediador del Estado, imparcial y sin asesoría legal de tu parte.</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-head"><span class="bar-name">Mediación privada (tope legal 2026)</span><span class="bar-val">$130.602 / sesión</span></div>
+        <div class="bar-track"><div class="bar-fill f-ocre" data-w="22"></div></div>
+        <div class="bar-note">Máximo que puede cobrar un mediador privado por sesión.</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-head"><span class="bar-name">Juicio con abogado particular</span><span class="bar-val">Honorarios libres</span></div>
+        <div class="bar-track"><div class="bar-fill f-jui" data-w="100"></div></div>
+        <div class="bar-note">No tiene tope; varía caso a caso. Especialistas estiman que litigar cuesta varias veces más que mediar.<a class="ref" href="#f6">6</a></div>
+      </div>
+    </div>
+    <p class="src">Fuentes: ChileAtiende<a class="ref" href="#f1">1</a>; arancel 2026, Mediación Chile – Ministerio de Justicia (Decreto Exento N°277)<a class="ref" href="#f3">3</a>.</p>
+  </div>
+
+  <h2><span class="kicker">El reloj</span>Lo que demora cada camino</h2>
+  <p>La ley le pone plazos cortos a la mediación: <strong>máximo 60 días</strong> desde la primera sesión, ampliables por otros 60 si ambas partes quieren.<a class="ref" href="#f2">2</a> En la práctica, el proceso promedia cerca de <strong>43 días</strong>.<a class="ref" href="#f4">4</a> Un juicio de familia, en cambio, se mide en meses, dentro de un sistema con una carga enorme: en 2025 los tribunales de primera instancia recibieron <strong>2,8 millones de causas</strong>.<a class="ref" href="#f5">5</a></p>
+
+  <div class="viz reveal" id="vizTiempo">
+    <div class="viz-title">Tiempo hasta resolver, en días</div>
+    <div class="viz-sub">Menos tiempo es menos incertidumbre para los niños y para ti.</div>
+    <div class="bars">
+      <div class="bar-row">
+        <div class="bar-head"><span class="bar-name">Mediación (promedio real)</span><span class="bar-val">~43 días</span></div>
+        <div class="bar-track"><div class="bar-fill f-med" data-w="24"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-head"><span class="bar-name">Mediación (tope legal)</span><span class="bar-val">60 días (+60)</span></div>
+        <div class="bar-track"><div class="bar-fill f-ocre" data-w="33"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-head"><span class="bar-name">Juicio de familia</span><span class="bar-val">60 a 180 días o más</span></div>
+        <div class="bar-track"><div class="bar-fill f-jui" data-w="100"></div></div>
+      </div>
+    </div>
+    <p class="src">Fuentes: plazos legales, BCN Ley Fácil<a class="ref" href="#f2">2</a>; promedio de mediación, datos de gestión del Ministerio de Justicia<a class="ref" href="#f4">4</a>; carga del sistema, Cuenta Pública 2026 del Poder Judicial<a class="ref" href="#f5">5</a>. La duración del juicio es estimativa.</p>
+  </div>
+
+  <h2><span class="kicker">¿Funciona?</span>Cuántas mediaciones terminan en acuerdo</h2>
+  <p>Seamos honestos con los datos, porque importa. El único desglose nacional oficial que se puede citar con nombre y apellido corresponde al período <strong>2009–2015</strong>: de todas las causas mediadas, un 42% terminó en acuerdo, un 39% se frustró porque <em>una parte no asistió</em>, y un 19% se frustró pese a sentarse a conversar.<a class="ref" href="#f7">7</a></p>
+
+  <div class="viz reveal" id="vizAcuerdo">
+    <div class="viz-title">Resultado de las mediaciones · 2009–2015</div>
+    <div class="viz-sub">Dato oficial consolidado más reciente disponible para citar a nivel nacional.</div>
+    <div class="stack" id="stackAcuerdo">
+      <div class="seg s1" data-w="42" title="Acuerdo">42%</div>
+      <div class="seg s2" data-w="39" title="Frustrada sin sesión"></div>
+      <div class="seg s3" data-w="19" title="Frustrada con sesión"></div>
+    </div>
+    <div class="legend">
+      <span class="item"><span class="dot" style="background:var(--verde)"></span>Acuerdo (42%)</span>
+      <span class="item"><span class="dot" style="background:var(--ocre-bril)"></span>Frustrada: una parte no asistió (39%)</span>
+      <span class="item"><span class="dot" style="background:var(--oxblood)"></span>Frustrada con sesión (19%)</span>
+    </div>
+    <p class="src">Fuente: estudio sobre el rol del Estado en la mediación familiar 2009–2015 (Redalyc)<a class="ref" href="#f7">7</a>.</p>
+  </div>
+
+  <div class="callout reveal">
+    <p><span class="big">El dato esperanzador (y la lección)</span>
+    Mira de nuevo: casi 4 de cada 10 mediaciones fracasan porque <strong>una parte simplemente no llega</strong>. Cuando ambas sí se sientan a conversar, el panorama cambia: en el estudio de satisfacción 2024 del Ministerio, entre quienes asistieron a sesión, cerca de <strong>7 de cada 10</strong> llegaron a acuerdo.<a class="ref" href="#f8">8</a> La conclusión es clara: la mediación funciona cuando llegas preparada y bien asesorada. Ahí es donde una abogada de familia hace la diferencia.</p>
+  </div>
+
+  <h2><span class="kicker">La diferencia real</span>Mediar por tu cuenta vs. mediar con asesoría</h2>
+  <p>Aquí está el punto que más conviene entender. La mediación estatal es gratuita, pero el mediador es <strong>imparcial por ley</strong>: facilita el acuerdo, pero no está de tu lado ni puede aconsejarte qué te conviene aceptar.<a class="ref" href="#f1">1</a> Esa es exactamente la diferencia que hace tener una abogada a tu lado.</p>
+
+  <div class="viz reveal">
+    <div class="viz-title">¿Qué cambia con asesoría?</div>
+    <div class="viz-sub">El mismo proceso de mediación, dos resultados muy distintos.</div>
+    <div class="compare">
+      <div class="col neutral">
+        <h4>🪑 Mediar por tu cuenta</h4>
+        <div class="qrow no">Llegas sin saber con certeza qué te corresponde por ley</div>
+        <div class="qrow no">Riesgo de aceptar un acuerdo bajo o en tu contra</div>
+        <div class="qrow no">El mediador es imparcial: no defiende tus intereses</div>
+        <div class="qrow no">El acuerdo puede quedar mal redactado y traer conflictos después</div>
+        <div class="qrow no">Si la otra parte llega asesorada, quedas en desventaja</div>
+      </div>
+      <div class="col med">
+        <h4>👩‍⚖️ Mediar con tu abogada</h4>
+        <div class="qrow yes">Sabes exactamente qué pedir y qué te corresponde</div>
+        <div class="qrow yes">Negocias desde una posición informada y protegida</div>
+        <div class="qrow yes">Alguien vela por <strong>tus</strong> intereses y prepara tu estrategia</div>
+        <div class="qrow yes">El acuerdo queda bien hecho: montos, gastos y pagos claros, para que se cumpla</div>
+        <div class="qrow yes">Y si la mediación no resulta, ya tienes quien te represente en el juicio</div>
+      </div>
+    </div>
+    <p class="src">El rol del mediador es facilitar el acuerdo de forma imparcial; no representa a ninguna de las partes (ChileAtiende<a class="ref" href="#f1">1</a>). La asesoría de una abogada es un servicio profesional independiente del proceso de mediación.</p>
+  </div>
+
+  <h2><span class="kicker">Acá, en la región</span>Por qué en La Araucanía esto pesa más</h2>
+  <p>La Araucanía es la región donde un camino rápido, accesible y cercano hace la mayor diferencia. Es la región con <strong>más pobreza</strong> del país y la <strong>más rural</strong>, donde trasladarse a un tribunal cuesta tiempo y plata que muchas familias no tienen.</p>
+
+  <div class="viz reveal" id="vizRegion">
+    <div class="viz-title">La Araucanía en cifras</div>
+    <div class="viz-sub">El contexto que hace urgente una solución accesible.</div>
+    <div class="stats">
+      <div class="stat"><div class="num" data-target="28.6" data-dec="1" data-suf="%">0%</div><div class="cap">de pobreza por ingresos — la más alta del país (CASEN 2024)<a class="ref" href="#f9">9</a></div></div>
+      <div class="stat"><div class="num" data-target="31.8" data-dec="1" data-suf="%">0%</div><div class="cap">de población rural — la mayor de Chile (Censo 2017)<a class="ref" href="#f10">10</a></div></div>
+      <div class="stat"><div class="num" data-target="34.3" data-dec="1" data-suf="%">0%</div><div class="cap">pertenece a un pueblo originario (Censo 2017)<a class="ref" href="#f10">10</a></div></div>
+    </div>
+    <p class="src">Fuentes: CASEN 2024, Ministerio de Desarrollo Social y Familia<a class="ref" href="#f9">9</a>; Censo 2017, INE<a class="ref" href="#f10">10</a>.</p>
+  </div>
+
+  <p>La buena noticia: no hay que ir lejos. En la región, el sistema estatal de mediación familiar funciona a través de centros gratuitos en muchas comunas, incluidas donde más se necesita.</p>
+
+  <div class="viz reveal">
+    <div class="viz-title">Centros de mediación familiar gratuitos en La Araucanía</div>
+    <div class="viz-sub">Atención presencial en la región (y también remota por videollamada).</div>
+    <div class="comunas">
+      <span class="comuna hl">Temuco</span>
+      <span class="comuna hl">Villarrica</span>
+      <span class="comuna hl">Pucón</span>
+      <span class="comuna">Angol</span>
+      <span class="comuna">Victoria</span>
+      <span class="comuna">Lautaro</span>
+      <span class="comuna">Traiguén</span>
+      <span class="comuna">Purén</span>
+      <span class="comuna">Curacautín</span>
+      <span class="comuna">Carahue</span>
+      <span class="comuna">Nueva Imperial</span>
+      <span class="comuna">Pitrufquén</span>
+      <span class="comuna">Toltén</span>
+    </div>
+    <p class="src">Fuente: red de centros de mediación licitada en La Araucanía (CREA – Universidad Católica de Temuco)<a class="ref" href="#f11">11</a>. La cobertura puede variar; conviene confirmar la comuna al agendar.</p>
+  </div>
+
+  <h2><span class="kicker">El argumento decisivo</span>Ganar el juicio no es ganar el problema</h2>
+  <p>Acá está lo que casi nadie te dice. Conseguir una sentencia no garantiza que la pensión se pague. El incumplimiento en Chile es masivo: se estima que cerca del <strong>84% de las pensiones decretadas se incumple</strong>, y en la enorme mayoría de los casos quien queda esperando ese dinero es una <strong>mujer</strong>.<a class="ref" href="#f12">12</a></p>
+
+  <div class="viz reveal" id="vizIncumple">
+    <div class="viz-title">De cada 100 pensiones decretadas…</div>
+    <div class="viz-sub">El problema no es solo obtener la pensión, sino que se pague.</div>
+    <div class="dot-caption">
+      <span class="pct" data-target="84" data-suf="%">0%</span>
+      <div style="flex:1;min-width:180px">se incumple, según estimaciones a partir de datos del Poder Judicial.<a class="ref" href="#f12">12</a> Por eso lo que más vale no es la cifra, sino que el acuerdo sea <strong>sólido y se cumpla</strong>.</div>
+    </div>
+    <div class="dotgrid" id="dotgrid" style="margin-top:18px"></div>
+    <p class="src">Fuente: estimaciones sobre incumplimiento de pensiones a partir de datos del Poder Judicial, recogidas en literatura especializada<a class="ref" href="#f12">12</a>.</p>
+  </div>
+
+  <p>El Estado reaccionó con la Ley de Responsabilidad Parental y Pago Efectivo (Ley 21.484), que permite a los tribunales buscar y retener fondos de quien debe. Su balance muestra el tamaño del problema:</p>
+
+  <div class="viz reveal" id="vizLey">
+    <div class="viz-title">Ley 21.484, en números</div>
+    <div class="viz-sub">Balance nacional a noviembre de 2025.</div>
+    <div class="stats">
+      <div class="stat"><div class="num" data-target="2.9" data-dec="1" data-pre="$" data-suf=" bill.">0</div><div class="cap">ordenados pagar por los Tribunales de Familia<a class="ref" href="#f13">13</a></div></div>
+      <div class="stat"><div class="num" data-target="322" data-suf=" mil">0</div><div class="cap">familias beneficiadas a nivel nacional<a class="ref" href="#f13">13</a></div></div>
+      <div class="stat"><div class="num" data-target="53" data-suf="%">0%</div><div class="cap">de los deudores inscritos pagó o pactó pago<a class="ref" href="#f13">13</a></div></div>
+    </div>
+    <p class="src">Fuente: balance de la Ley 21.484, Poder Judicial / Ministerio de la Mujer y la Equidad de Género<a class="ref" href="#f13">13</a>. "Bill." = billones (millones de millones).</p>
+  </div>
+
+  <p>Y en nuestra región el problema tiene rostro: a agosto de 2023, <strong>4.945 personas</strong> figuraban en La Araucanía en el Registro Nacional de Deudores de Pensiones de Alimentos.<a class="ref" href="#f14">14</a> Detrás de cada número hay un niño o niña esperando.</p>
+
+  <p>La lección práctica para quien está empezando este camino: lo valioso no es solo "ganar", sino construir un acuerdo bien hecho —montos claros, gastos extraordinarios definidos, mecanismos de pago— que se sostenga en el tiempo y no termine de vuelta en tribunales. Eso se logra mejor mediando con buena asesoría que litigando a ciegas.</p>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta reveal">
+    <h2>¿Tu situación es de familia? Conversémoslo antes de demandar</h2>
+    <p>Te explico en palabras simples qué te conviene en tu caso, cuánto puede costar y cuánto demorar, sin tecnicismos y sin compromiso.</p>
+    <div class="cta-btns">
+      <a class="btn btn-light" href="https://calendar.app.google/RRi5vbPNvxNhCouJ6" target="_blank" rel="noopener">Agendar consulta</a>
+      <a class="btn btn-wa" href="https://wa.me/56959389566" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-4A8 8 0 1 1 8 19.4z"/><path d="M8.8 9.2c0 3 2.4 5.4 5.4 5.4.5 0 1-.5 1-1l-1.6-.9-.9.6c-1-.4-1.9-1.3-2.3-2.3l.6-.9-.9-1.6c-.5 0-1 .5-1 1z"/></svg>
+        Escríbeme por WhatsApp
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== Fuentes ===== -->
+<section class="wrap fuentes">
+  <h2>Fuentes</h2>
+  <p style="font-size:.86rem;color:var(--texto-2)">Todos los datos provienen de fuentes oficiales o estudios verificables. Cuando un dato es una estimación de la práctica profesional y no una cifra oficial, se indica expresamente en el texto.</p>
+  <ol>
+    <li id="f1">ChileAtiende — <em>Mediación familiar previa y obligatoria</em>. <a href="https://www.chileatiende.gob.cl/fichas/2344-mediacion-familiar-previa-y-obligatoria" target="_blank" rel="noopener">chileatiende.gob.cl/fichas/2344</a></li>
+    <li id="f2">Biblioteca del Congreso Nacional — <em>Ley Fácil: Mediación familiar</em> (plazos y costos). <a href="https://www.bcn.cl/portal/leyfacil/recurso/mediacion-familiar" target="_blank" rel="noopener">bcn.cl/leyfacil/mediacion-familiar</a></li>
+    <li id="f3">Mediación Chile, Ministerio de Justicia y DDHH — <em>Mediadores privados</em>, arancel máximo 2026 (Decreto Exento N°277, 30 de enero de 2026: $130.602 por sesión). <a href="https://www.mediacionchile.gob.cl/mediadores-privados/" target="_blank" rel="noopener">mediacionchile.gob.cl/mediadores-privados</a></li>
+    <li id="f4">Ministerio de Justicia y DDHH — Cuenta Pública 2024 (volumen y gestión del Sistema Nacional de Mediación Familiar). <a href="https://www.minjusticia.gob.cl/" target="_blank" rel="noopener">minjusticia.gob.cl</a></li>
+    <li id="f5">Poder Judicial de Chile — Cuenta Pública 2026 (carga de tribunales de primera instancia: 2.857.000 causas en 2025). <a href="https://cuentapublica.pjud.cl/" target="_blank" rel="noopener">cuentapublica.pjud.cl</a></li>
+    <li id="f6">La Tercera — <em>Radiografía de la mediación familiar en Chile</em> (estimaciones de especialistas sobre costo y duración comparados). <a href="https://www.latercera.com/" target="_blank" rel="noopener">latercera.com</a></li>
+    <li id="f7">Redalyc — <em>Rol del Estado chileno en el sistema de mediación familiar (2009–2015)</em>: 42% acuerdo, 39% frustrada sin sesión, 19% frustrada con sesión. <a href="https://www.redalyc.org/journal/280/28056733005/html/" target="_blank" rel="noopener">redalyc.org/journal/280/28056733005</a></li>
+    <li id="f8">Ministerio de Justicia y DDHH — Estudio de satisfacción de usuarios de mediación familiar 2024 (acuerdo entre quienes asistieron a sesión; universo que excluye inasistencias). <a href="https://www.mediacionchile.gob.cl/" target="_blank" rel="noopener">mediacionchile.gob.cl</a></li>
+    <li id="f9">Ministerio de Desarrollo Social y Familia — Encuesta CASEN 2024 (pobreza por ingresos en La Araucanía, nueva metodología). <a href="https://observatorio.ministeriodesarrollosocial.gob.cl/" target="_blank" rel="noopener">observatorio.ministeriodesarrollosocial.gob.cl</a></li>
+    <li id="f10">Instituto Nacional de Estadísticas (INE) — Censo 2017 (ruralidad y pertenencia a pueblos originarios en La Araucanía). <a href="https://www.ine.gob.cl/" target="_blank" rel="noopener">ine.gob.cl</a></li>
+    <li id="f11">CREA, Universidad Católica de Temuco — Centros de Mediación Familiar licitados en La Araucanía. <a href="https://crea.uct.cl/" target="_blank" rel="noopener">crea.uct.cl</a></li>
+    <li id="f12">Estimaciones sobre incumplimiento de pensiones de alimentos a partir de datos del Poder Judicial, recogidas en literatura especializada (≈84% de incumplimiento; mayoría de acreedoras son mujeres).</li>
+    <li id="f13">Poder Judicial / Ministerio de la Mujer y la Equidad de Género — Balance de la Ley 21.484 de Responsabilidad Parental y Pago Efectivo (a noviembre de 2025). <a href="https://minmujeryeg.gob.cl/" target="_blank" rel="noopener">minmujeryeg.gob.cl</a></li>
+    <li id="f14">Poder Judicial / Registro Nacional de Deudores de Pensiones de Alimentos — deudores inscritos en La Araucanía (al 21 de agosto de 2023; la cifra actual probablemente es mayor). <a href="https://www.pjud.cl/" target="_blank" rel="noopener">pjud.cl</a></li>
+  </ol>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div>
+      <strong style="color:#e7d4c1;font-family:'Fraunces',serif">Dana Hernández Pacheco</strong><br>
+      Abogada · Derecho de familia y mediación · La Araucanía
+    </div>
+    <div>
+      <a href="https://wa.me/56959389566" target="_blank" rel="noopener">WhatsApp +56 9 5938 9566</a> ·
+      <a href="index.html">Volver al inicio</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="disc">Este artículo tiene fines informativos y no constituye asesoría legal para un caso particular. Cada situación es distinta; para orientación sobre tu caso, agenda una consulta.</p>
+  </div>
+</footer>
+
+<script>
+/* ===== Barra de progreso de lectura ===== */
+var bar = document.getElementById('progressBar');
+window.addEventListener('scroll', function(){
+  var h = document.documentElement;
+  var alto = h.scrollHeight - h.clientHeight;
+  bar.style.width = (alto > 0 ? (h.scrollTop / alto * 100) : 0) + '%';
+}, {passive:true});
+
+/* ===== Construye la grilla de 100 puntos (incumplimiento) ===== */
+(function(){
+  var grid = document.getElementById('dotgrid');
+  if(!grid) return;
+  for(var i=0;i<100;i++){
+    var d = document.createElement('div');
+    d.className = 'd';
+    grid.appendChild(d);
+  }
+})();
+
+/* ===== Anima contadores numéricos ===== */
+function animaContador(el){
+  var target = parseFloat(el.getAttribute('data-target'));
+  var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+  var suf = el.getAttribute('data-suf') || '';
+  var pre = el.getAttribute('data-pre') || '';
+  var ini = null, dur = 1100;
+  function paso(t){
+    if(!ini) ini = t;
+    var p = Math.min((t - ini) / dur, 1);
+    var val = (target * (0.2 + 0.8 * (1 - Math.pow(1 - p, 3)))); // easing
+    if(p >= 1) val = target;
+    // formato chileno: coma decimal, punto de miles
+    var txt = val.toFixed(dec).replace('.', ',');
+    if(dec === 0) txt = Math.round(val).toLocaleString('es-CL');
+    el.textContent = pre + txt + suf;
+    if(p < 1) requestAnimationFrame(paso);
+  }
+  requestAnimationFrame(paso);
+}
+
+/* ===== Activa barras al entrar en pantalla ===== */
+function activaBarras(cont){
+  cont.querySelectorAll('.bar-fill, .seg').forEach(function(b){
+    var w = b.getAttribute('data-w');
+    if(w) b.style.width = w + '%';
+  });
+}
+
+/* ===== Activa grilla de puntos ===== */
+function activaDots(){
+  var dots = document.querySelectorAll('#dotgrid .d');
+  dots.forEach(function(d, i){
+    if(i < 84){
+      setTimeout(function(){ d.classList.add('on'); }, i * 12);
+    }
+  });
+}
+
+/* ===== Observer único para revelar y disparar animaciones ===== */
+var obs = new IntersectionObserver(function(entradas){
+  entradas.forEach(function(e){
+    if(!e.isIntersecting) return;
+    var el = e.target;
+    el.classList.add('in');
+    // disparadores específicos
+    if(el.id === 'vizCosto' || el.id === 'vizTiempo' || el.id === 'vizAcuerdo') activaBarras(el);
+    if(el.id === 'vizRegion' || el.id === 'vizLey'){
+      el.querySelectorAll('.num').forEach(animaContador);
+    }
+    if(el.id === 'vizIncumple'){
+      el.querySelectorAll('.num, .pct').forEach(animaContador);
+      activaDots();
+    }
+    obs.unobserve(el);
+  });
+}, {threshold:0.3});
+
+document.querySelectorAll('.reveal, .viz').forEach(function(el){ obs.observe(el); });
+
+/* ===== Tooltip simple en la barra de acuerdo (resalta segmento) ===== */
+document.querySelectorAll('#stackAcuerdo .seg').forEach(function(seg){
+  seg.addEventListener('mouseenter', function(){ seg.style.filter = 'brightness(1.12)'; });
+  seg.addEventListener('mouseleave', function(){ seg.style.filter = ''; });
+});
+</script>
+</body>
+</html>
